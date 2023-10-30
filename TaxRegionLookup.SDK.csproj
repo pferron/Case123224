@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Avalara.TaxRegionLookup.SDK</AssemblyName>
+    <RootNamespace>Avalara.TaxRegionLookup.SDK</RootNamespace>
+    <Version>2.1.0</Version>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl" Version="3.0.7" />
+    <PackageReference Include="Flurl.Http" Version="3.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ISC.MapDotNetServer.Common">
+      <HintPath>..\Vendor\ISC.MapDotNetServer.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

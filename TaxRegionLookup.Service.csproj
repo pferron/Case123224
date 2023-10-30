@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Avalara.TaxRegionLookup.Service</AssemblyName>
+    <RootNamespace>Avalara.TaxRegionLookup.Service</RootNamespace>
+    <VersionPrefix>23.1.0</VersionPrefix>
+    <VersionSuffix>0</VersionSuffix>
+    <DockerDebuggeeWorkingDirectory>/app</DockerDebuggeeWorkingDirectory>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileRunArguments>-v ~/.aws/:/root/.aws/</DockerfileRunArguments>
+    <DockerfileContext>../..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TaxRegionResolve\**" />
+    <Content Remove="TaxRegionResolve\**" />
+    <EmbeddedResource Remove="TaxRegionResolve\**" />
+    <None Remove="TaxRegionResolve\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TaxRegionResolver\Entities\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Avalara.Extensions.Configuration" Version="30.0.1" />
+    <PackageReference Include="AWSSDK.S3" Version="3.5.10.2" />
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.5.0.59" />
+    <PackageReference Include="AWSSDK.SecurityToken" Version="3.5.1.60" />
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.3" />
+    <PackageReference Include="prometheus-net" Version="6.0.0" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="prometheus-net.DotNetRuntime" Version="4.1.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+    <PackageReference Include="SumoLogic.Logging.AspNetCore" Version="1.0.1.4" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="TransactionStorageService.AwsCertificateManagerCertLoader" Version="20.4.0.440039" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaxRegionLookup.SDK\TaxRegionLookup.SDK.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ISC.MapDotNetServer.Common">
+      <HintPath>..\Vendor\ISC.MapDotNetServer.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
