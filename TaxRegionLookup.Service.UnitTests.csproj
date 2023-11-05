@@ -19,7 +19,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\TaxRegionLookup.SDK\TaxRegionLookup.SDK.csproj" />
+		<ProjectReference Include="TaxRegionLookup.SDK.csproj" />
 		<ProjectReference Include="..\TaxRegionLookup.Service\TaxRegionLookup.Service.csproj" />
 		<Reference Include="ISC.MapDotNetServer.Common">
 			<HintPath>..\Vendor\ISC.MapDotNetServer.Common.dll</HintPath>
