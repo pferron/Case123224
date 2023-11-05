@@ -46,7 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TaxRegionLookup.SDK\TaxRegionLookup.SDK.csproj" />
+    <ProjectReference Include="TaxRegionLookup.SDK.csproj" />
   </ItemGroup>
 
   <ItemGroup>
