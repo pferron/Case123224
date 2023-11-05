@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TaxRegionLookup.SDK\TaxRegionLookup.SDK.csproj" />
-    <ProjectReference Include="..\TaxRegionLookup.Service\TaxRegionLookup.Service.csproj" />
+    <ProjectReference Include="TaxRegionLookup.SDK.csproj" />
+    <ProjectReference Include="TaxRegionLookup.Service.csproj" />
   </ItemGroup>
 
 </Project>
